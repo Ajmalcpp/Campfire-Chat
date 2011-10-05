@@ -33,14 +33,13 @@
       function onRequest(request, sender, callback) {
       	
         if (request.action == 'passContent') {
-        // alert(request.search);
-          // var xhr = new XMLHttpRequest();
-          // var url = 'http://apps.nikhilben.com?email='+request.username+'&password='+request.password;
-          // xhr.open('POST', url, true);
-          // xhr.send(); 
-          
-        
-		
+        	
+        	var msg = request.chatCount;
+        	
+        	chrome.browserAction.setBadgeBackgroundColor({color:[250, 0, 0, 100]});
+        	chrome.browserAction.setBadgeText({text:String(msg)});
+        	
+       
        var notification = webkitNotifications.createNotification(
 		  'icons/icon128.png',  // icon url - can be relative
 		  request.person,  // notification title
