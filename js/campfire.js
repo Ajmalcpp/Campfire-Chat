@@ -44,7 +44,8 @@ b[0]&&b[0].ownerDocument||c);var h=[],i;for(var j=0,k;(k=a[j])!=null;j++){typeof
 	   	else 
 		   	{
 		   		var value = last_message ;
-		   		chrome.extension.sendRequest({'action' : 'passContent', 'search' : value, 'person' : last_message_person});
+		   		var count = 5;
+		   		chrome.extension.sendRequest({'action' : 'passContent', 'search' : value, 'person' : last_message_person, 'chatCount': count});
 		   		
 		   	}
   
